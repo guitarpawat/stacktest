@@ -35,7 +35,7 @@ public class StackTest {
         assertNull("Empty stack must be return null when peek",stack.peek());
     }
     
-    @Test(expected = java.util.EmptyStackException.class)
+    @Test(expected = EmptyStackException.class)
     public void testEmptyStackException() {
         stack = makeStack(3);
         stack.push(one);
@@ -43,7 +43,7 @@ public class StackTest {
         stack.pop();
     }
     
-    @Test(expected = java.util.EmptyStackException.class)
+    @Test(expected = EmptyStackException.class)
     public void testEmptyStackException0() {
         stack = makeStack(0);
         stack.pop();
@@ -55,8 +55,8 @@ public class StackTest {
         assumeNotNull(stack);
         assertEquals("Size of empty stack must be 0",0,stack.size());
         assertEquals("Invalid capacity of stack",0,stack.capacity());
-        assertTrue("isEmpty of size=0 stack must be true",stack.isEmpty());
-        assertTrue("isFull of size=0 stack must be true",stack.isFull());
+        assertTrue("isEmpty when size=0 stack must be true",stack.isEmpty());
+        assertTrue("isFull when size=0 stack must be true",stack.isFull());
         assertNull("Empty stack must be return null when peek",stack.peek());
     }
     
